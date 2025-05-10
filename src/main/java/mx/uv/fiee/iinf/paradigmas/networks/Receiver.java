@@ -26,8 +26,7 @@ public class Receiver {
      */
     private static class SocketUtils {
 
-        private Socket socket;
-
+        private SSLSocket socket;
         /**
          * Constructor que inicializa un socket cliente para conectarse a un servidor.
          * @param address Dirección del servidor.

@@ -52,7 +52,7 @@ public class Sender {
      * Clase interna para manejar la conexión del socket y el envío de datos.
      */
     private static class SocketUtils {
-        private final Socket socket;
+        private final SSLSocket socket;
 
         /**
          * Constructor que inicializa un ServerSocket y espera una conexión entrante.
