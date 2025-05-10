@@ -59,9 +59,10 @@ public class Sender {
          * @throws IOException Si ocurre un error al crear el socket.
          */
         SocketUtils() throws IOException {
-            try (ServerSocket serverSocket = new ServerSocket(19000)) {
+            SSLServerSocketFactory ssf = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
+            try (SSLServerSocket serverSocket = (SSLServerSocket) ssf.createServerSocket(19000)) {
                 System.out.println("Waiting for a connection...");
-                socket = serverSocket.accept ();
+                socket = (SSLSocket) serverSocket.accept();
             }
         }
 

@@ -34,7 +34,8 @@ public class Receiver {
          */
         public SocketUtils (String address, int port) {
             try {
-                socket = new Socket (address, port);
+                SSLSocketFactory sf = (SSLSocketFactory) SSLSocketFactory.getDefault();
+                socket = (SSLSocket) sf.createSocket(address, port);
             } catch (IOException e) {
                 e.printStackTrace ();
                 throw new RuntimeException("Error creating socket");
