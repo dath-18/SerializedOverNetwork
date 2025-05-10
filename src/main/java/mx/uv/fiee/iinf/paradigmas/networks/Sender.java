@@ -59,6 +59,8 @@ public class Sender {
          * @throws IOException Si ocurre un error al crear el socket.
          */
         SocketUtils() throws IOException {
+            System.setProperty("javax.net.ssl.keyStore", "src/main/resources/miclave.jks");
+            System.setProperty("javax.net.ssl.keyStorePassword", "alexis18");
             SSLServerSocketFactory ssf = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
             try (SSLServerSocket serverSocket = (SSLServerSocket) ssf.createServerSocket(19000)) {
                 System.out.println("Waiting for a connection...");

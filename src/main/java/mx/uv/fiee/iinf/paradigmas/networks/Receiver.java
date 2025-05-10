@@ -34,6 +34,8 @@ public class Receiver {
          */
         public SocketUtils (String address, int port) {
             try {
+                System.setProperty("javax.net.ssl.keyStore", "src/main/resources/miclave.jks");
+                System.setProperty("javax.net.ssl.keyStorePassword", "alexis18");
                 SSLSocketFactory sf = (SSLSocketFactory) SSLSocketFactory.getDefault();
                 socket = (SSLSocket) sf.createSocket(address, port);
             } catch (IOException e) {
