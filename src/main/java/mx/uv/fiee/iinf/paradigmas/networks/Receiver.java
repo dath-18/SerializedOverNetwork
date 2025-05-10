@@ -1,9 +1,10 @@
 package mx.uv.fiee.iinf.paradigmas.networks;
 
 import java.io.IOException;
-import java.net.Socket;
 import mx.uv.fiee.iinf.paradigmas.networks.models.Persona;
 import java.io.ObjectInputStream;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
 
 /**
  * Clase principal que recibe objetos serializados desde un socket.

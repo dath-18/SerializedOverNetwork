@@ -5,10 +5,11 @@ import mx.uv.fiee.iinf.paradigmas.networks.models.Persona;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.UUID;
 import java.util.Random;
+import javax.net.ssl.SSLServerSocket;
+import javax.net.ssl.SSLServerSocketFactory;
+import javax.net.ssl.SSLSocket;
 
 /**
  * Clase principal que envía objetos serializados a través de la red.
